@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Check car status">
+    <test name="Check front left door status">
+        <parameter name="itemType" value="FRONT_LEFT_DOOR"/>
+        <classes>
+            <class name="tests.CarStatusTest">
+                <methods>
+                    <include name="ItemStatusTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Check front right door status">
+        <parameter name="itemType" value="FRONT_RIGHT_DOOR"/>
+        <classes>
+            <class name="tests.CarStatusTest">
+                <methods>
+                    <include name="ItemStatusTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

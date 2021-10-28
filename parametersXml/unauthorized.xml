@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Check car status with no authorization">
+    <test name="Check front left door status with no authorization">
+        <parameter name="itemType" value="FRONT_LEFT_DOOR"/>
+        <classes>
+            <class name="tests.UnauthorizedTest">
+                <methods>
+                    <include name="UnauthorizedTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Check front right door status with no authorization">
+        <parameter name="itemType" value="FRONT_RIGHT_DOOR"/>
+        <classes>
+            <class name="tests.UnauthorizedTest">
+                <methods>
+                    <include name="UnauthorizedTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

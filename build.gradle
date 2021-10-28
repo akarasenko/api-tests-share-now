@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.testng:testng:6.14.3'
+    compile 'org.hamcrest:java-hamcrest:2.0.0.0'
+    implementation 'io.rest-assured:rest-assured:4.4.0'
+    testImplementation 'io.rest-assured:json-path:4.4.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
+    testCompile 'io.qameta.allure:allure-testng:2.14.0'
+}
+
+test{
+    useTestNG{
+        suites "parametersXml/carStatus.xml"
+        suites "parametersXml/unauthorized.xml"
+    }
+}
+
